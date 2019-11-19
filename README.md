@@ -73,26 +73,25 @@ So let's go build something that changes the world.
               "responsible_entities": [
                 "UN-WOMEN"
               ],
-              ...
 }
 ```
 
 
 
-##/targets
+## targets
 
 | parameter                 | type           | description                                                                      | example |
 |---------------------------|----------------|----------------------------------------------------------------------------------|---------|
 | `none`                      |      `null`          | retrives a list of all the targets                                                 |         |
 | `goals`                       | `Array<String>` | goal number to filter targets                          | 1, 2, 4    |
 | `ids`                       | `Array<String>` | id number to filter targets                          | 1.1, 2.4, 4.a     |
-####example
+#### example
 
-#####request
+##### request
 
 `http://localhost:3000/targets?goals=5&ids=5.a`
 
-#####response
+##### response
 
 ```json
 {
@@ -107,7 +106,7 @@ So let's go build something that changes the world.
 }
 ```
 
-##/indicators
+## indicators
 
 | parameter                 | type           | description                                                                      | example |
 |---------------------------|----------------|----------------------------------------------------------------------------------|---------|
@@ -117,7 +116,7 @@ So let's go build something that changes the world.
 | `targets`                       | `Array<String>` | target numbers to filter indicators                          | 4.2, 6.4, 9.1    |
 | `includeMetadata`                       | `Boolean` | returns detailed metadata where available, for each indicator                          | true    |
 
-###indicator metadata fields
+### indicator metadata fields
 
 An effort was made to collect as much information as possible from each individual PDF. Where it was not possible to collect information directly, a "see report" message should be noted. From there, one can use the `goal_meta_link` along with the `goal_meta_link_page` to link directly to the PDF and page for the indicator.
 
@@ -155,13 +154,13 @@ An effort was made to collect as much information as possible from each individu
 |`supplementary_information` | Supplementary Information|
 |`references` | References|
 
-####example
+#### example
 
-#####request
+##### request
 
 `http://localhost:3000/indicators?goals=4&targets=4.2`
 
-#####response
+##### response
 
 ```json
 {
