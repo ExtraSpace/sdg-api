@@ -32,10 +32,14 @@ So let's go build something that changes the world.
 | `includeMetadata` | `Boolean`        | returns detailed metadata where available, for each indicator | true    |
 | `locale` | `String`        | returns a translated version of the `title` and `short` values. supported languages are `en, es, fr, ru` | en    |
 
-####example 
+####example
+
 #####request
+
 `http://localhost:3000/goals?ids=5,12&targets=true&indicators=true&includeMetadata=true`
+
 #####response
+
 ```json
 {
   "data": [
@@ -76,16 +80,20 @@ So let's go build something that changes the world.
 
 
 ##/targets
+
 | parameter                 | type           | description                                                                      | example |
 |---------------------------|----------------|----------------------------------------------------------------------------------|---------|
 | `none`                      |      `null`          | retrives a list of all the targets                                                 |         |
 | `goals`                       | `Array<String>` | goal number to filter targets                          | 1, 2, 4    |
 | `ids`                       | `Array<String>` | id number to filter targets                          | 1.1, 2.4, 4.a     |
 ####example
+
 #####request
+
 `http://localhost:3000/targets?goals=5&ids=5.a`
 
 #####response
+
 ```json
 {
   "data": [
@@ -100,6 +108,7 @@ So let's go build something that changes the world.
 ```
 
 ##/indicators
+
 | parameter                 | type           | description                                                                      | example |
 |---------------------------|----------------|----------------------------------------------------------------------------------|---------|
 | `none`                      |      `null`          | retrives a list of all the indicators                                                 |         |
@@ -109,6 +118,7 @@ So let's go build something that changes the world.
 | `includeMetadata`                       | `Boolean` | returns detailed metadata where available, for each indicator                          | true    |
 
 ###indicator metadata fields
+
 An effort was made to collect as much information as possible from each individual PDF. Where it was not possible to collect information directly, a "see report" message should be noted. From there, one can use the `goal_meta_link` along with the `goal_meta_link_page` to link directly to the PDF and page for the indicator.
 
 | metadata field            | description  |
@@ -146,9 +156,13 @@ An effort was made to collect as much information as possible from each individu
 |`references` | References|
 
 ####example
+
 #####request
+
 `http://localhost:3000/indicators?goals=4&targets=4.2`
+
 #####response
+
 ```json
 {
   "data": [
@@ -172,6 +186,7 @@ An effort was made to collect as much information as possible from each individu
 
 
 ## Licensing
+
 Copyright 2016 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
