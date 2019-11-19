@@ -177,7 +177,7 @@ An effort was made to collect as much information as possible from each individu
     },
     {
       "indicator_id": "4.2.1"
-      ...
+      
 }
 ```
 
