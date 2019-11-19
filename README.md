@@ -21,7 +21,7 @@ So let's go build something that changes the world.
 
 # documentation
 
-##/goals
+## goals
 
 | parameter                 | type           | description                                                                      | example |
 |---------------------------|----------------|----------------------------------------------------------------------------------|---------|
@@ -32,13 +32,13 @@ So let's go build something that changes the world.
 | `includeMetadata` | `Boolean`        | returns detailed metadata where available, for each indicator | true    |
 | `locale` | `String`        | returns a translated version of the `title` and `short` values. supported languages are `en, es, fr, ru` | en    |
 
-####example
+#### example
 
-#####request
+##### request
 
 `http://localhost:3000/goals?ids=5,12&targets=true&indicators=true&includeMetadata=true`
 
-#####response
+##### response
 
 ```json
 {
